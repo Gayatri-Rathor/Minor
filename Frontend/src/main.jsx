@@ -11,22 +11,22 @@ import { BudgetProvider } from "./context/BudgetContext";
 import { NotificationsProvider } from "./context/NotificationsContext";
 import { ThemeProvider } from "./context/ThemeContext";
 
-import "./style/global.scss";
+import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>
       <ThemeProvider>
         <AuthProvider>
-          <ExpenseProvider>
-            <IncomeProvider>
-              <BudgetProvider>
-                <NotificationsProvider>
+          <NotificationsProvider>
+            <ExpenseProvider>
+              <IncomeProvider>
+                <BudgetProvider>
                   <App />
-                </NotificationsProvider>
-              </BudgetProvider>
-            </IncomeProvider>
-          </ExpenseProvider>
+                </BudgetProvider>
+              </IncomeProvider>
+            </ExpenseProvider>
+          </NotificationsProvider>
         </AuthProvider>
       </ThemeProvider>
     </BrowserRouter>

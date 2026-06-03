@@ -16,7 +16,14 @@ function App() {
   const { loading } = useAuth();
 
   if (loading) {
-    return <div style={{ textAlign: "center", marginTop: "50px" }}>Loading...</div>;
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-surface-50 dark:bg-surface-900">
+        <div className="text-center animate-pulse-soft">
+          <p className="text-4xl mb-3">💎</p>
+          <p className="text-slate-500 dark:text-slate-400 font-medium">Loading ExpenseAI...</p>
+        </div>
+      </div>
+    );
   }
 
   return (
