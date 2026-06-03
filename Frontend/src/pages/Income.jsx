@@ -120,12 +120,12 @@ function Income() {
   </div>
 ) : (
   filteredIncome.map((income) => (
-    <tr key={income.id}>
+    <tr key={income._id}>
       <td>{income.source}</td>
       <td>₹{income.amount}</td>
-      <td>{income.date}</td>
+      <td>{income.date ? new Date(income.date).toLocaleDateString() : ""}</td>
       <td>
-        <button onClick={() => deleteIncome(income.id)}>
+        <button onClick={() => deleteIncome(income._id)}>
           Delete
         </button>
       </td>

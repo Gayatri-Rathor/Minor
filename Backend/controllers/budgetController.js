@@ -6,7 +6,7 @@ export const getBudget = async (req, res) => {
 };
 
 export const setBudget = async (req, res) => {
-  await Budget.deleteMany({ userId: req.user });
+  await Budget.deleteMany({ userId: req.user.id });
 
   const data = await Budget.create({
     userId: req.user.id,

@@ -153,13 +153,13 @@ function Expenses() {
   </div>
 ) : (
   filteredExpenses.map((expense) => (
-    <tr key={expense.id}>
+    <tr key={expense._id}>
       <td>{expense.title}</td>
       <td>₹{expense.amount}</td>
       <td>{expense.category}</td>
-      <td>{expense.date}</td>
+      <td>{expense.date ? new Date(expense.date).toLocaleDateString() : ""}</td>
       <td>
-        <button onClick={() => deleteExpense(expense.id)}>
+        <button onClick={() => deleteExpense(expense._id)}>
           Delete
         </button>
       </td>

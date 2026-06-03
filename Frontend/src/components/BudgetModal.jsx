@@ -7,7 +7,7 @@ import {
 function BudgetModal({
   closeModal,
 }) {
-  const { updateBudget } =
+  const { setBudget } =
     useBudget();
 
   const [amount, setAmount] =
@@ -16,7 +16,7 @@ function BudgetModal({
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    updateBudget(amount);
+    setBudget(amount);
 
     closeModal();
   };

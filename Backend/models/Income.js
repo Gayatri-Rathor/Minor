@@ -5,8 +5,8 @@ const incomeSchema = new mongoose.Schema({
   source: String,
   amount: Number,
   date: {
-    type: String,
-    default: new Date().toLocaleDateString(),
+    type: Date,
+    default: Date.now,
   },
 });
 

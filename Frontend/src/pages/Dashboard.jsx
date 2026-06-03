@@ -143,7 +143,7 @@ function Dashboard() {
 
                 <small>
                   {
-                    activity.date
+                    activity.date ? new Date(activity.date).toLocaleDateString() : ""
                   }
                 </small>
               </div>

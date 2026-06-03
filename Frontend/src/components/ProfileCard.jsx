@@ -1,4 +1,8 @@
+import { useAuth } from "../context/AuthContext";
+
 function ProfileCard() {
+  const { user } = useAuth();
+
   return (
     <div className="profile-card">
       <div className="avatar">
@@ -6,8 +10,8 @@ function ProfileCard() {
       </div>
 
       <div>
-        <h3>User</h3>
-        <p>Smart Expense Tracker</p>
+        <h3>{user?.name || "User"}</h3>
+        <p>{user?.email || "Smart Expense Tracker"}</p>
       </div>
     </div>
   );
