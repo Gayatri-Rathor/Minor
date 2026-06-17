@@ -2,6 +2,11 @@ import { useExpense } from "../context/ExpenseContext";
 import { useIncome } from "../context/IncomeContext";
 import { useBudget } from "../context/BudgetContext";
 import { useAuth } from "../context/AuthContext";
+import Charts from "../components/Charts";
+import AIChats from "../components/AIChats"
+
+// Use anywhere:
+
 
 const statCards = [
   { key: "income", label: "Total Income", icon: "💰", color: "from-emerald-400 to-emerald-600", textColor: "text-emerald-600 dark:text-emerald-400" },
@@ -106,6 +111,8 @@ function Dashboard() {
           </div>
         )}
       </div>
+      <Charts />
+     <AIChats />
     </div>
   );
 }
